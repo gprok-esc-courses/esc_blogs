@@ -1,0 +1,5 @@
+INSERT INTO users (name, email, password, role) VALUES ('admin', 'admin@blogs.local', '1111', 'ROLE_ADMIN')
+INSERT INTO users (name, email, password, role) VALUES ('johndoe', 'jd@blogs.local', '1111', 'ROLE_BLOGGER')
+INSERT INTO users (name, email, password, role) VALUES ('marydoe', 'md@blogs.local', '1111', 'ROLE_BLOGGER')
+INSERT INTO users (name, email, password, role) VALUES ('pattismith', 'ps@blogs.local', '1111', 'ROLE_BLOGGER')
+INSERT INTO users (name, email, password, role) VALUES ('raycharles', 'rc@blogs.local', '1111', 'ROLE_BLOGGER')
