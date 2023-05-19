@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+  th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+    <h2 th:text="${blog.getTitle()}">Title</h2>
+    <div th:text="${blog.getCategory()}">Category</div>
+    <div th:text="${blog.getUser().getName()}">Author</div>
+
+    <br>
+    <h3>POSTS</h3>
+
+    <div th:each="post: ${blog.getPosts()}">
+        <span th:text="${post.getTitle()}">Title</span>
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,6 +1,5 @@
 package com.example.esc_blogs.model;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -15,27 +14,26 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "blogs")
+public class Blog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String name;
+    private String title;
 
-    @Column(nullable = false, unique = true)
-    private String email;
+    private String category;
 
-    @Column(nullable = false)
-    private String password;
+    @Column(unique = true)
+    private String slug;
 
-    @Column(nullable = false)
-    private String role;
+    @ManyToOne
+    private User user;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "blog_id")
     @JsonIgnore
-    private Set<Blog> blogs;
+    private Set<Post> posts;
+
 }

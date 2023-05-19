@@ -3,3 +3,14 @@ INSERT INTO users (name, email, password, role) VALUES ('johndoe', 'jd@blogs.loc
 INSERT INTO users (name, email, password, role) VALUES ('marydoe', 'md@blogs.local', '1111', 'ROLE_BLOGGER')
 INSERT INTO users (name, email, password, role) VALUES ('pattismith', 'ps@blogs.local', '1111', 'ROLE_BLOGGER')
 INSERT INTO users (name, email, password, role) VALUES ('raycharles', 'rc@blogs.local', '1111', 'ROLE_BLOGGER')
+
+INSERT INTO blogs (title, category, slug, user_id) VALUES ('All about Java', 'Programming', 'all-about-java', 2)
+INSERT INTO blogs (title, category, slug, user_id) VALUES ('Spring Boot notes', 'Programming', 'spring-boot-notes', 2)
+INSERT INTO blogs (title, category, slug, user_id) VALUES ('Cooking in my yard', 'Cooking', 'cooking-in-yard', 3)
+
+INSERT INTO posts (title, content, slug, blog_id) VALUES ('Java Versions', 'Versions of Java ...', 'java-versions', 1)
+INSERT INTO posts (title, content, slug, blog_id) VALUES ('Variables', 'Data types are ...', 'variables', 1)
+INSERT INTO posts (title, content, slug, blog_id) VALUES ('How hard Spring is?', 'A lot ...', 'spring-hard', 2)
+INSERT INTO posts (title, content, slug, blog_id) VALUES ('Light dinner', 'Important and tasty ...', 'light-dinner', 3)
+INSERT INTO posts (title, content, slug, blog_id) VALUES ('Homemade Pizza', 'With simple ingredients ...', 'homemade-pizza', 3)
+INSERT INTO posts (title, content, slug, blog_id) VALUES ('Select Wine', 'Red or white? ...', 'select-wine', 3)
